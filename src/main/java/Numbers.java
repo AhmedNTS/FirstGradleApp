@@ -4,10 +4,9 @@
 public class Numbers {
 
     public static void main(String[] args) {
-        // System.out.println("Modulo : " + (4 % 20));
+        System.out.println("Modulo : " + (4 % 20));
 
-        // fibonacci(0,1,0,10);
-
+        fibonacci(0, 1, 0, 10);
     }
 
     static void fibonacci(int f0, int f1, int fib, int n) {
