@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ThreadLockTest",
+            "request": "launch",
+            "mainClass": "ThreadLockTest",
+            "projectName": "FirstGradleApp"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "App",
