@@ -1,19 +1,19 @@
 public class Sorting {
 
     public static void main(String[] args) {
-        int[] unsortedList = new int[] { 5, 2, 6, 3, 4, 1 };
+        int[] unsortedList = new int[]{5, 2, 6, 3, 4, 1};
         int n = unsortedList.length;
 
-        for (int k = 0; k < n; k++) {
-            System.out.print(unsortedList[k] + " ");
+        for (int i : unsortedList) {
+            System.out.print(i + " ");
         }
         System.out.println("\n----------------Before");
 
         bubbleSort(unsortedList, n);
 
         System.out.println("\n----------------After");
-        for (int k = 0; k < n; k++)
-            System.out.print(unsortedList[k] + " ");
+        for (int i : unsortedList)
+            System.out.print(i + " ");
     }
 
     private static void selectionSort(int[] a, int n) {

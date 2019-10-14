@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ThreadLockTest {
 	public static void main(String[] args) {
 		TestResource test = new TestResource();
-		Thread thread[] = new Thread[10];
+		Thread[] thread = new Thread[10];
 
 		for (int i = 0; i < 5; i++) {
 			thread[i] = new Thread(new DisplayJob(test), "Thread " + i);
@@ -79,7 +79,7 @@ class TestResource {
 
 	// displayRecord uses displayQueueLock to
 	// achieve thread safety.
-	public void displayRecord(Object document) {
+	void displayRecord(Object document) {
 		final Lock displayLock = this.displayQueueLock;
 		displayLock.lock();
 		try {
@@ -96,11 +96,11 @@ class TestResource {
 	}
 
 	// readRecord uses readQueueLock to achieve thread safety.
-	public void readRecord(Object document) {
+	void readRecord(Object document) {
 		final Lock readQueueLock = this.readQueueLock;
 		readQueueLock.lock();
 		try {
-			Long duration = (long) (Math.random() * 10000);
+			long duration = (long) (Math.random() * 10000);
 			System.out.println(Thread.currentThread().getName() + ": TestResource: reading a Job during "
 					+ (duration / 1000) + " seconds :: Time - " + new Date());
 			Thread.sleep(duration);
