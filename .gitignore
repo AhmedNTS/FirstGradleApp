@@ -9,3 +9,4 @@ out
 .idea
 build
 .settings
+local.properties
